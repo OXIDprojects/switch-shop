@@ -38,7 +38,7 @@ jobs:
         MD=$(pwd)
         cd /var/www/oxideshop
         touch autoload.oxid.php
-        vendor/bin/phpstan analys  --level 3 --configuration phpstan.neon $MD
+        vendor/bin/phpstan analys  --level 6 --configuration phpstan.neon $MD
     - name: psalm
       run: |
         MD=$(pwd)
