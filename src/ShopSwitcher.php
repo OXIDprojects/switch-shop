@@ -9,10 +9,11 @@ use OxidEsales\Eshop\Core\UtilsObject;
 use OxidEsales\Eshop\Application\Model\ShopList;
 use OxidEsales\Eshop\Application\Model\Shop;
 
+/** @implements IteratorAggregate<int, Shop> */
 class ShopSwitcher implements IteratorAggregate
 {
     /**
-     * @var array<Shop> $shopList
+     * @var array<int, Shop> $shopList
      **/
     private $shopList;
    
@@ -23,7 +24,7 @@ class ShopSwitcher implements IteratorAggregate
     }
    
     /**
-     *
+     * @return Traversable<int, Shop>
      **/
     public function getIterator()
     {
