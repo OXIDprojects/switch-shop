@@ -29,8 +29,8 @@ class ShopSwitcher implements IteratorAggregate
     public function getIterator()
     {
         return (function () {
-            foreach ($this->shopList as $key => $val) {
-                $shopId = $val->oxshops__oxid->rawValue;
+            foreach ($this->shopList as $key => $shop) {
+                $shopId = $shop->getId();
                 $this->switchToShopId($shopId);
                 yield $key => $shopId;
             }
