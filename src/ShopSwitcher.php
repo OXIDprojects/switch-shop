@@ -24,7 +24,7 @@ class ShopSwitcher implements IteratorAggregate
     }
    
     /**
-     * @return Traversable<int, Shop>
+     * @return \Traversable<int, Shop>
      **/
     public function getIterator()
     {
