@@ -38,7 +38,8 @@ jobs:
         MD=$(pwd)
         cd /var/www/oxideshop
         touch autoload.oxid.php
-        vendor/bin/phpstan analys  --level 6 --configuration phpstan.neon $MD
+        echo > phpstan-baseline.neon
+        vendor/bin/phpstan analys --level 7 --error-format baselineNeon --configuration phpstan.neon $MD
     - name: psalm
       run: |
         MD=$(pwd)
